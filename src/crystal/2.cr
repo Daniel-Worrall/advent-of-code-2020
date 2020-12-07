@@ -13,7 +13,7 @@ module AdventOfCode
     numbers, char, pass = password.split
     numbers = numbers.split("-").map(&.to_i)
     char = char[0]
-    numbers.count { |num| pass[num-1] == char } == 1
+    numbers.count { |num| pass[num - 1] == char } == 1
   end
 
   def run_2_1
