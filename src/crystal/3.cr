@@ -33,10 +33,10 @@ module AdventOfCode
   extend self
 
   def run_3_1
-    AdventOfCode::TobogganMap.new(File.read("#{__DIR__}/input/3.txt")).trees(3, 1)
+    TobogganMap.new(File.read("#{__DIR__}/input/3.txt")).trees(3, 1)
   end
 
   def run_3_2
-    AdventOfCode::TobogganMap.new(File.read("#{__DIR__}/input/3.txt")).tree_product
+    TobogganMap.new(File.read("#{__DIR__}/input/3.txt")).tree_product
   end
 end
