@@ -43,10 +43,10 @@ module AdventOfCode
   extend self
 
   def run_7_1
-    Haversack.new(File.read("#{__DIR__}/input/7.txt")).outer_colours("shiny gold")
+    Haversack.new(get_file).outer_colours("shiny gold")
   end
 
   def run_7_2
-    Haversack.new(File.read("#{__DIR__}/input/7.txt")).total_bags("shiny gold")
+    Haversack.new(get_file).total_bags("shiny gold")
   end
 end

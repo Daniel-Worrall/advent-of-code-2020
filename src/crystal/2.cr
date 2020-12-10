@@ -17,10 +17,10 @@ module AdventOfCode
   end
 
   def run_2_1
-    File.read("#{__DIR__}/input/2.txt").split("\n").count { |pass| valid_password(pass) }
+    get_file.split("\n").count { |pass| valid_password(pass) }
   end
 
   def run_2_2
-    File.read("#{__DIR__}/input/2.txt").split("\n").count { |pass| valid_password_2(pass) }
+    get_file.split("\n").count { |pass| valid_password_2(pass) }
   end
 end

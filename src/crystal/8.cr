@@ -62,10 +62,10 @@ module AdventOfCode
   extend self
 
   def run_8_1
-    Console.new(File.read("#{__DIR__}/input/8.txt")).run.acc
+    Console.new(get_file).run.acc
   end
 
   def run_8_2
-    Console.new(File.read("#{__DIR__}/input/8.txt")).uncorrupt_run.acc
+    Console.new(get_file).uncorrupt_run.acc
   end
 end

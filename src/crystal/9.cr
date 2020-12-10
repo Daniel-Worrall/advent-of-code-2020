@@ -40,11 +40,11 @@ module AdventOfCode
   extend self
 
   def run_9_1
-    XMAS(Int64).new(File.read("#{__DIR__}/input/9.txt").lines.map(&.to_i64)).first_invalid
+    XMAS(Int64).new(get_file.lines.map(&.to_i64)).first_invalid
   end
 
   def run_9_2
-    xmas = XMAS(Int64).new(File.read("#{__DIR__}/input/9.txt").lines.map(&.to_i64))
+    xmas = XMAS(Int64).new(get_file.lines.map(&.to_i64))
     xmas.encryption_weakness(
       504, 14144619 # *xmas.first_invalid
     )

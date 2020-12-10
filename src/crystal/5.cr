@@ -17,13 +17,13 @@ module AdventOfCode
   extend self
 
   def run_5_1
-    File.read("#{__DIR__}/input/5.txt").lines.max_of do |line|
+    get_file.lines.max_of do |line|
       BoardingPass.new(line).seat_id
     end
   end
 
   def run_5_2
-    seats = File.read("#{__DIR__}/input/5.txt").lines.map do |line|
+    seats = get_file.lines.map do |line|
       BoardingPass.new(line).seat_id
     end
     (Set.new(seats.min..seats.max) - seats).first

@@ -59,10 +59,10 @@ module AdventOfCode
   end
 
   def run_4_1
-    AdventOfCode.passports(File.read("#{__DIR__}/input/4.txt")).count(&.valid?)
+    passports(get_file).count(&.valid?)
   end
 
   def run_4_2
-    AdventOfCode.passports(File.read("#{__DIR__}/input/4.txt")).count(&.strict_valid?)
+    passports(get_file).count(&.strict_valid?)
   end
 end

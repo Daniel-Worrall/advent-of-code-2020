@@ -21,7 +21,7 @@ describe AdventOfCode do
 277
 309
 576"
-data = input.lines.map(&.to_i)
+  data = input.lines.map(&.to_i)
   describe "9.1" do
     describe "XMAS" do
       it "passes example" do

@@ -9,12 +9,12 @@ module AdventOfCode
   end
 
   def run_1_1
-    expenses = File.read("#{__DIR__}/input/1.txt").split("\n").map(&.to_i)
-    AdventOfCode.expense_report(2, expenses)
+    expenses = get_file.split("\n").map(&.to_i)
+    expense_report(2, expenses)
   end
 
   def run_1_2
-    expenses = File.read("#{__DIR__}/input/1.txt").split("\n").map(&.to_i)
+    expenses = get_file.split("\n").map(&.to_i)
     AdventOfCode.expense_report(3, expenses)
   end
 end

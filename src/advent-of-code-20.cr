@@ -2,6 +2,20 @@ require "./crystal/**"
 require "option_parser"
 require "benchmark"
 
+module AdventOfCode
+  def self.get_file(call_file = __FILE__) : String
+    if digits = call_file.match(/(\d+).cr/)
+      get_file(digits[1].to_i)
+    else
+      raise "No matched file"
+    end
+  end
+
+  def self.get_file(input : Int32) : String
+    File.read("#{__DIR__}/input/#{input}.txt")
+  end
+end
+
 macro print_method(method)
   print {{ method[4..method.size].gsub(/_/, ".") }}, ": ", AdventOfCode.{{ method.id }}, "\n"
 end
