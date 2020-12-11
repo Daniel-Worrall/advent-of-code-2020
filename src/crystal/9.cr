@@ -11,8 +11,8 @@ module AdventOfCode
       (0...@data.size).each do |base|
         checking = to_check.select((base..(base + preamble)).to_a)
 
-        @data[base...base + preamble].each_combination(2, reuse = true) do |x|
-          checking.select { |k, v| v == x.sum }.each do |k, v|
+        @data[base...base + preamble].each_combination(2, reuse: true) do |x|
+          checking.select { |_, v| v == x.sum }.each do |k, _|
             checking.delete(k)
             to_check.delete(k)
           end
@@ -26,9 +26,9 @@ module AdventOfCode
     def encryption_weakness(index, invalid_number : T)
       raise "Invalid" unless @data[index] == invalid_number
 
-      @data.each_index do |index|
+      @data.each_index do |i|
         sum = 0
-        range = @data[index..].take_while do |value|
+        range = @data[i..].take_while do |value|
           sum += value
           sum < invalid_number
         end
