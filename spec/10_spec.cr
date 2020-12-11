@@ -53,7 +53,7 @@ describe AdventOfCode do
   end
 
   describe "10.2" do
-    describe "XMAS" do
+    describe "jolt_permutations" do
       it "passes example" do
         AdventOfCode.jolt_permutations(input).should eq 8
         AdventOfCode.jolt_permutations(input2).should eq 19208
