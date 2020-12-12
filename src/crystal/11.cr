@@ -98,8 +98,7 @@ module AdventOfCode
           break {x, y} if @seats.has_key?({x, y})
         end
       end
-        .reject(&.nil?)
-        .map(&.not_nil!)
+        .reject(Nil)
         .to_a
     end
   end
