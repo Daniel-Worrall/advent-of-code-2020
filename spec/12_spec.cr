@@ -21,7 +21,6 @@ F11"
         ship.navigate_waypoint(1).manhatten.should eq 110
         ship.navigate_waypoint(2).manhatten.should eq 208
         AdventOfCode::Navigation.new(input).navigate_waypoint.manhatten.should eq 286
-
       end
     end
   end

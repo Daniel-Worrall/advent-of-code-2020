@@ -29,7 +29,7 @@ module AdventOfCode
       chinese_remainder(arr)
     end
 
-    private def chinese_remainder(arr : Array(Tuple(Int64,Int64))) : Int64
+    private def chinese_remainder(arr : Array(Tuple(Int64, Int64))) : Int64
       max = arr.product(&.[0])
       arr.sum do |(m, r)|
         max // m * (r.abs < (m + r) ? r : (m + r)) * inverse(max // m, m)
